@@ -16,7 +16,7 @@ import Link from "next/link";
 //   "/foo"           for pages/foo/index.js
 //   "/foo/bar"       for pages/foo/bar.js
 //   "/foo/[...bar]"  for pages/foo/[...bar].js
-const publicPages = [];
+const publicPages = ["/invitation-callback"];
 
 function MyApp({ Component, pageProps }) {
   // Get the pathname

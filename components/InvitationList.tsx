@@ -38,7 +38,12 @@ const InviteMember = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     setDisabled(true);
-    await organization.inviteMember({ emailAddress, role });
+    await organization.inviteMember({
+      emailAddress,
+      role,
+      redirectUrl:
+        window.location.origin + "/invitation-callback?final_url=/final",
+    });
     setEmailAddress("");
     setRole("basic_member");
     setDisabled(false);
